@@ -1,0 +1,34 @@
+{
+  "schema_version":     1,
+  "name":               "DS",
+  "version":            "2.0.6.dolphinscheduler7.1.7",
+  "setActiveSymlink":   true,
+  "depends": "CDH (>= 7.0), CDH (<< 8)",
+  "provides": ["ds"],
+  "scripts": {
+    "defines": "ds_env.sh"
+  },
+ 
+  "packages": [{
+    "name": "dolphinscheduler",
+    "version": "2.0.6.ds7.1.7"
+  }],
+ 
+  "components": [{
+    "name":    "dolphinscheduler",
+    "version": "2.0.6.ds7.1.7",
+    "pkg_version": "2.0.6.ds7.1.7"
+  }],
+ 
+  "users": {
+    "dsmaster": {
+      "longname"    : "DolphinScheduler",
+      "home"       : "/var/lib/dolphinscheduler",
+ 	  "shell"       : "/bin/bash",
+      "extra_groups": []
+    }
+  },
+ 
+  "groups": ["dsmaster"]
+}
+
