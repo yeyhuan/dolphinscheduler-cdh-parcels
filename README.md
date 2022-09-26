@@ -1,5 +1,6 @@
 # dolphinscheduler-cdh-parcels
 对dolphinscheduler-2.0.6进行打包，托管到CDH7.1.7集群
+dolphinscheduler2.0.6下载链接 https://dlcdn.apache.org/dolphinscheduler/2.0.6/apache-dolphinscheduler-2.0.6-bin.tar.gz
 
 #### parcels包资源地址
 链接: https://pan.baidu.com/s/12vAwc_E1ji7s86IeaNJnPQ  密码: 2kvo
