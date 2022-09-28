@@ -72,12 +72,6 @@ start() {
 stop() {
     echo "stop DS"
    sh $install_path/bin/dolphinscheduler-daemon-cdh.sh stop $server_name;
-
-   case $server_name in
-     master-server )
-        
-       ;;
-   esac
 }
  
  
