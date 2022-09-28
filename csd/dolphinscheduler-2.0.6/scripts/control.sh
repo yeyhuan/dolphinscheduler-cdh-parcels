@@ -27,6 +27,7 @@ config() {
    echo "pythonGatewayServers: $pythonGatewayServers"
    echo "install_path: $install_path"
    echo "api_server_port: $api_server_port"
+   echo "ips: $ips"
    sed -i  "s#spring.datasource.url.*#spring.datasource.url=\"jdbc:mysql://$dbhost/$dbname?characterEncoding=UTF-8\&allowMultiQueries=true\"#g" $DS_HOME/conf/application-mysql.properties
    sed -i  "s#spring.datasource.username.*#spring.datasource.username=\"$username\"#g" $DS_HOME/conf/application-mysql.properties
    sed -i  "s#spring.datasource.password.*#spring.datasource.password=\"$password\"#g" $DS_HOME/conf/application-mysql.properties
@@ -35,15 +36,16 @@ config() {
    sed -i  "s#SPRING_DATASOURCE_USERNAME.*#SPRING_DATASOURCE_USERNAME=\"$username\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#SPRING_DATASOURCE_PASSWORD.*#SPRING_DATASOURCE_PASSWORD=\"$password\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#registryServers.*#registryServers=\"$zookeeper_server\"#g" $DS_HOME/conf/config/install_config.conf
-
+   
+   sed -i  "s#ips.*#ips=\"$ips\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#masters.*#masters=\"$masters\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#workers.*#workers=\"$workers\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#alertServer.*#alertServer=\"$alertServer\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#apiServers.*#apiServers=\"$apiServers\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#pythonGatewayServers.*#pythonGatewayServers=\"$pythonGatewayServers\"#g" $DS_HOME/conf/config/install_config.conf
-   sed -i  "s#installPath.*#installPath=\"$install_path\"#g" $DS_HOME/conf/config/install_config.conf
+   sed -i  "s#installPath=.*#installPath=\"$install_path\"#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#dataBasedirPath.*#dataBasedirPath=\"$install_path\"#g" $DS_HOME/conf/config/install_config.conf
-   sed -i  "s#data.basedir.path.*#data.basedir.path=\"$install_path\"#g" $DS_HOME/conf/common.properties 
+   sed -i  "s#data.basedir.path.*#data.basedir.path=$install_path#g" $DS_HOME/conf/common.properties
    sed -i  "s#apiServerPort.*#apiServerPort=$api_server_port#g" $DS_HOME/conf/config/install_config.conf
    sed -i  "s#server.port.*#server.port=$api_server_port#g" $DS_HOME/conf/application-api.properties
 
