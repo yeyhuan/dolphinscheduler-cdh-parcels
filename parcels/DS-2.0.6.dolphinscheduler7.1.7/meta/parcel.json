@@ -21,7 +21,7 @@
   }],
  
   "users": {
-    "dsmaster": {
+    "ds": {
       "longname"    : "DolphinScheduler",
       "home"       : "/var/lib/dolphinscheduler",
  	  "shell"       : "/bin/bash",
@@ -29,6 +29,6 @@
     }
   },
  
-  "groups": ["dsmaster"]
+  "groups": ["ds"]
 }
 
