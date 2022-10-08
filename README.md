@@ -2,7 +2,7 @@
 对dolphinscheduler-2.0.6进行打包，托管到CDH7.1.7集群  
 
 #### parcels包资源地址
-链接: https://pan.baidu.com/s/12vAwc_E1ji7s86IeaNJnPQ  密码: 2kvo
+链接: https://pan.baidu.com/s/1KL-tRHuiII6TFn4cAVmwkA  密码: sk2u
 
 #### 包目录结构
 ##### parcels
